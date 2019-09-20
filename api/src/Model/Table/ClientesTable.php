@@ -39,6 +39,19 @@ class ClientesTable extends Table
         $this->hasMany('Pedidos', [
             'foreignKey' => 'cliente_id'
         ]);
+
+        $this->addBehavior('Search.Search');
+
+        $this->searchManager()
+            ->add('telefone', 'Search.Like', [
+                'before' => true,
+                'after' => true,
+                'fieldMode' => 'OR',
+                'comparison' => 'LIKE',
+                'wildcardAny' => '*',
+                'wildcardOne' => '?',
+                'field' => ['telefone']
+            ]);
     }
 
     /**

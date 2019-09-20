@@ -19,7 +19,7 @@ class ClientesController extends AppController
      */
     public function index()
     {
-        $clientes = $this->paginate($this->Clientes);
+        $clientes = $this->paginate($this->Clientes->find('search', ['search' => $this->request->getQuery()]));
 
         $this->set([
             'clientes' => $clientes,
