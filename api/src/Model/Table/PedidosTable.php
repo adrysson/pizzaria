@@ -44,10 +44,12 @@ class PedidosTable extends Table
         $this->addBehavior('Timestamp');
 
         $this->belongsTo('PizzasSabores', [
+            'propertyName' => 'pizza_sabor',
             'foreignKey' => 'pizza_sabor_id',
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('PizzasTamanhos', [
+            'propertyName' => 'pizza_tamanho',
             'foreignKey' => 'pizza_tamanho_id',
             'joinType' => 'INNER'
         ]);

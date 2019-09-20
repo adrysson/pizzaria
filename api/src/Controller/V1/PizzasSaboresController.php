@@ -104,7 +104,7 @@ class PizzasSaboresController extends AppController
         $this->request->allowMethod(['delete']);
         $sabor = $this->PizzasSabores->get($id);
         if ($this->PizzasSabores->delete($sabor)) {
-            return $this->response->withStatus(204)->withStringBody(__('O sabor de pizza foi apagado com sucesso.'));
+            return $this->response->withStatus(204);
         }
         return $this->response->withStatus(400)->withStringBody(__('Não foi possível apagar o sabor de pizza. Tente novamente.'));
     }

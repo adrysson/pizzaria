@@ -104,7 +104,7 @@ class PizzasTamanhosController extends AppController
         $this->request->allowMethod(['delete']);
         $tamanho = $this->PizzasTamanhos->get($id);
         if ($this->PizzasTamanhos->delete($tamanho)) {
-            return $this->response->withStatus(204)->withStringBody(__('O tamanho de pizza foi apagado com sucesso.'));
+            return $this->response->withStatus(204);
         }
         return $this->response->withStatus(400)->withStringBody(__('Não foi possível apagar o tamanho de pizza. Tente novamente.'));
     }
