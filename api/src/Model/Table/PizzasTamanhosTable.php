@@ -52,8 +52,17 @@ class PizzasTamanhosTable extends Table
             ->scalar('nome')
             ->maxLength('nome', 255)
             ->requirePresence('nome', 'create')
-            ->notEmptyString('nome');
+            ->notEmptyString('nome')
+            ->add('nome', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'Este tamanho de pizza já foi cadastrado']);
 
         return $validator;
     }
+
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->isUnique(['nome']));
+
+        return $rules;
+    }
+
 }
