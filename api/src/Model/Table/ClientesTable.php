@@ -77,7 +77,7 @@ class ClientesTable extends Table
             ->maxLength('telefone', 50)
             ->requirePresence('telefone', 'create')
             ->notEmptyString('telefone')
-            ->add('telefone', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+            ->add('telefone', 'unique', ['rule' => 'validateUnique', 'provider' => 'table', 'message' => 'Já existe um cliente cadastado com esse telefone']);
 
         return $validator;
     }
