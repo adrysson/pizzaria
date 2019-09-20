@@ -102,3 +102,11 @@ Router::scope('/', function (RouteBuilder $routes) {
  * });
  * ```
  */
+
+Router::scope('/v1', ['prefix' => 'v1'], function (RouteBuilder $routes) {
+    $routes->setExtensions(['json']);
+
+    $routes->resources('PizzasSabores');
+
+    $routes->fallbacks(DashedRoute::class);
+});
