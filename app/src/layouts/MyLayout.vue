@@ -12,10 +12,8 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Pizzaria
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -26,59 +24,37 @@
       content-class="bg-grey-2"
     >
       <q-list>
-        <q-item-label header>Essential Links</q-item-label>
-        <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
+        <q-item-label header>MENU</q-item-label>
+        <q-item to="/">
           <q-item-section avatar>
-            <q-icon name="school" />
+            <q-icon name="list" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Docs</q-item-label>
-            <q-item-label caption>quasar.dev</q-item-label>
+            <q-item-label>Pedidos</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://github.quasar.dev">
+        <q-item to="clientes">
           <q-item-section avatar>
-            <q-icon name="code" />
+            <q-icon name="supervisor_account" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Github</q-item-label>
-            <q-item-label caption>github.com/quasarframework</q-item-label>
+            <q-item-label>Clientes</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://chat.quasar.dev">
+        <q-item to="pizzas-sabores">
           <q-item-section avatar>
-            <q-icon name="chat" />
+            <q-icon name="local_pizza" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Discord Chat Channel</q-item-label>
-            <q-item-label caption>chat.quasar.dev</q-item-label>
+            <q-item-label>Sabores de pizza</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://forum.quasar.dev">
+        <q-item to="pizzas-tamanhos">
           <q-item-section avatar>
-            <q-icon name="record_voice_over" />
+            <q-icon name="local_pizza" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Forum</q-item-label>
-            <q-item-label caption>forum.quasar.dev</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://twitter.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="rss_feed" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Twitter</q-item-label>
-            <q-item-label caption>@quasarframework</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable tag="a" target="_blank" href="https://facebook.quasar.dev">
-          <q-item-section avatar>
-            <q-icon name="public" />
-          </q-item-section>
-          <q-item-section>
-            <q-item-label>Facebook</q-item-label>
-            <q-item-label caption>@QuasarFramework</q-item-label>
+            <q-item-label>Tamanhos de pizza</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
