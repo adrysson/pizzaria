@@ -108,6 +108,7 @@ Router::scope('/v1', ['prefix' => 'v1'], function (RouteBuilder $routes) {
 
     $routes->resources('PizzasSabores');
     $routes->resources('PizzasTamanhos');
+    $routes->resources('Clientes');
 
     $routes->fallbacks(DashedRoute::class);
 });
