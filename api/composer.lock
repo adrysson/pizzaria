@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bae3f640a631a993a49129d353eefbf9",
+    "content-hash": "4cf2515698a9e13ecc05cfa966ae2e38",
     "packages": [
         {
             "name": "aura/intl",
@@ -51,6 +51,62 @@
                 "localization"
             ],
             "time": "2017-01-20T05:00:11+00:00"
+        },
+        {
+            "name": "bcrowe/cakephp-api-pagination",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bcrowe/cakephp-api-pagination.git",
+                "reference": "c820cd6f30b726e4011ba7d36bdbb664a82e5523"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bcrowe/cakephp-api-pagination/zipball/c820cd6f30b726e4011ba7d36bdbb664a82e5523",
+                "reference": "c820cd6f30b726e4011ba7d36bdbb664a82e5523",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.6",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.0",
+                "scrutinizer/ocular": "1.1",
+                "squizlabs/php_codesniffer": "~2.3.0"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BryanCrowe\\ApiPagination\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Crowe",
+                    "email": "bryan@bryan-crowe.com",
+                    "homepage": "http://bryan-crowe.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CakePHP 3 plugin that injects pagination information into API responses.",
+            "homepage": "https://github.com/bcrowe/cakephp-api-pagination",
+            "keywords": [
+                "api",
+                "cakephp",
+                "cakephp3",
+                "pagination"
+            ],
+            "time": "2018-05-17T19:56:49+00:00"
         },
         {
             "name": "cakephp/cakephp",
